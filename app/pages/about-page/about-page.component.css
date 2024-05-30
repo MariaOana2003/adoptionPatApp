@@ -1,0 +1,31 @@
+.about-page {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#mainTitle {
+    background-color: #6B8A7A; /* Updated background color */
+    margin: 0;
+    padding: 20px;
+    color: #FFFFFF; /* Updated text color */
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 3vw;
+}
+
+.about-page h1 {
+    color: #254336; /* Updated heading color */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.about-page p {
+    margin-bottom: 3vw;
+    font-size: 16px;
+    text-align: center;
+    color: black; /* Updated paragraph text color */
+}

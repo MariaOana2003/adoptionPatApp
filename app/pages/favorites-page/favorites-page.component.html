@@ -1,0 +1,16 @@
+<section>
+  <ul class="fav-pet-list">
+    <li *ngIf="!pets || pets.length === 0" class="fav-pet-list-item">
+      <p>You have no favorite pets yet!</p>
+    </li>
+    <li *ngFor="let pet of pets" class="fav-pet-list-item">
+      <ng-container *ngIf="pet.images && pet.images.length > 0">
+        <img [src]="pet.images[0]" alt="{{ pet.name }}">
+      </ng-container>
+      <div class="fav-pet-info">
+        <h3>{{ pet.name }}</h3>
+        <button mat-raised-button color="accent" (click)="goToPost('singlePost', pet.id)" class="seeMeButton">See post!</button>
+      </div>
+    </li>
+  </ul>
+</section>

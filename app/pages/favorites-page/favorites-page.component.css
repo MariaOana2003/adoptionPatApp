@@ -1,0 +1,138 @@
+section {
+  width: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #6B8A7A; /* Background color */
+}
+h3 {
+  color: #254336; /* Text color */
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.fav-pet-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* Center the posts horizontally */
+}
+
+.fav-pet-list-item {
+  flex: 1 1 calc(33.333% - 20px); /* 3 items per row, minus the space between them */
+  max-width: 33.333%; /* Ensure it doesn't extend beyond 33.333% */
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #B7B597; /* Border color */
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column; /* Image on top of text */
+  align-items: center; /* Center content */
+}
+
+.fav-pet-list-item:hover {
+  background-color: #eceae6; /* Hover background color */
+}
+
+.fav-pet-list-item img {
+  width: 100%; /* Set image width to 100% of container */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Cover the container */
+  margin-bottom: 10px; /* Space between image and text */
+  border-radius: 0; /* Remove border radius */
+  max-width: 100%; /* Ensure image doesn't exceed container */
+}
+
+.fav-pet-info {
+  width: 100%; /* Full width */
+  text-align: center; /* Center text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fav-pet-info h3 {
+  margin: 10px 0;
+}
+
+.fav-pet-info button {
+  margin: 5px;
+}
+
+.favButton {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #254336; /* Adjusted border color */
+}
+
+.seeMeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center the button horizontally */
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #B7B597; /* Adjusted button color */
+  color: #254336; /* Adjusted text color */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seeMeButton:hover {
+  background-color: #DAD3BE; /* Adjusted hover background color */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.seeMeButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(183, 181, 151, 0.5); /* Adjusted focus shadow */
+}
+
+@media (min-width: 1900px) {
+  .fav-pet-list-item {
+    flex: 1 1 calc(25% - 20px); 
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1899px) {
+  .fav-pet-list-item {
+    flex: 1 1 calc(33.333% - 20px); 
+    max-width: 33.333%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .fav-pet-list-item {
+    flex: 1 1 calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .fav-pet-list-item {
+    flex: 1 1 calc(100% - 20px); /* 1 item per row for phones */
+    max-width: 100%;
+  }
+}

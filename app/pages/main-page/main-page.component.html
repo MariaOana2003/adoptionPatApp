@@ -1,0 +1,28 @@
+<section class="container">
+  <div class="filter-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Filter by species</mat-label>
+      <mat-select [(value)]="filter" (selectionChange)="onFilterChange($event)">
+        <mat-option value="all">All</mat-option>
+        <mat-option value="Dog">Dogs</mat-option>
+        <mat-option value="Cat">Cats</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <ul class="pet-list">
+      <li *ngFor="let pet of filteredPets" class="pet-list-item">
+        <ng-container *ngIf="pet && pet.images && pet.images.length > 0">
+          <img [src]="pet.images[0]" alt="{{ pet.name }}">
+        </ng-container>
+        <div class="pet-info">
+          <h3>{{ pet.name }}</h3>
+          <button mat-raised-button color="accent" (click)="goToPost('singlePost', pet.id)" class="see-me-button">See me!</button>
+          <button mat-icon-button color="accent" aria-label="Example icon button with a heart icon" class="favButton" (click)="addToFavorite(pet)">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

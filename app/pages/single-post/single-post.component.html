@@ -1,0 +1,31 @@
+<div *ngIf="pet" class="single-post">
+    <div class="image-container">
+      <button *ngIf="pet.images.length > 1" mat-icon-button (click)="prevImage()" class="left-button">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <img [src]="currentImage" alt="{{ pet.name }}">
+      <button *ngIf="pet.images.length > 1" mat-icon-button (click)="nextImage()" class="right-button">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+    <div class="content-container">
+      <div class="info-container">
+        <h2>{{ pet.name }}</h2>
+        <p>{{ pet.description }}</p>
+        <p>{{ pet.preferences }}</p>
+        <p><strong>Favorite Activities:</strong> {{ pet.favoriteActivities }}</p>
+        <p><strong>Food:</strong> {{ pet.food }}</p>
+        <p><strong>Type of Animal:</strong> {{ pet.typeOfAnimal }}</p>
+        <p><strong>Species:</strong> {{ pet.species }}</p>
+        <p><strong>Breed:</strong> {{ pet.breeds }}</p>
+        <p><strong>Age:</strong> {{ pet.age }}</p>
+        <p><strong>Status:</strong> {{ pet.status }}</p>
+        <p><strong>Location:</strong> {{ pet.location }}</p>
+      </div>
+      <div class="button-container">
+        <p>If you want to adopt this animal, fill out the form</p>
+        <button mat-raised-button color="primary" (click)="goToFormPage('adoption-form-page')" class="adoptButton">Adopt</button>
+      </div>
+    </div>
+  </div>
+  

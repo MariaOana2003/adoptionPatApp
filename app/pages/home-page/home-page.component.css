@@ -1,0 +1,115 @@
+/* Main Title Component Styling */
+#mainTitleComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #254336, #6b8a7a, #b7b597, #dad3be);
+    color: #ffffff; /* White text color */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  /* Main Title Styling */
+  #mainTitle {
+    margin: 10% 0;
+    font-size: 5vw;
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Font Sizes for Main Title */
+  @media (max-width: 1200px) {
+    #mainTitle {
+      font-size: 6vw;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #mainTitle {
+      font-size: 7vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #mainTitle {
+      font-size: 8vw;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #mainTitle {
+      font-size: 10vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #mainTitle {
+      font-size: 12vw;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    #mainTitle {
+      font-size: 14vw;
+    }
+  }
+  
+  /* Button Container Styling */
+  #buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Start Button Styling */
+  #startButton {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background-color: #CAE6B2;
+    color: #8E3E63;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button Hover and Focus Effects */
+  #startButton:hover {
+    background-color: #B5D29C;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  #startButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(202, 230, 178, 0.5);
+  }
+  
+  /* Responsive Button Sizing */
+  @media (max-width: 480px) {
+    #startButton {
+      width: 150px;
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    #startButton {
+      width: 120px;
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+  

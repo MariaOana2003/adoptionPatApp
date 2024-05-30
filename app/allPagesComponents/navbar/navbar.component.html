@@ -1,0 +1,33 @@
+<header>
+  <mat-toolbar>
+    <img src="assets/logo/logo1.jpg" alt="logo1" class="logo1">
+    <nav class="main-menu">
+      <a mat-button routerLink="/" routerLinkActive="active">Home</a>
+      <a mat-button routerLink="/mainPage" routerLinkActive="active">Adopt</a>
+      <a mat-button routerLink="/favoritesPage" routerLinkActive="active">Favorites</a>
+      <a mat-button routerLink="/addPetPage" routerLinkActive="active">Add new pet</a>
+      <a mat-button routerLink="/aboutPage" routerLinkActive="active">About</a>
+      <a mat-button routerLink="/contactPage" routerLinkActive="active">Contact</a>
+    </nav>
+    <button mat-icon-button class="menu-button" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+</header>
+
+<mat-sidenav-container class="side-menu" [hasBackdrop]="true">
+  <mat-sidenav #sidenav mode="side" [(opened)]="menuOpen" (closedStart)="menuOpen = false" class="sidenav">
+    <mat-nav-list class="listMenu">
+      <a mat-list-item routerLink="/" routerLinkActive="active" (click)="sidenav.close()">Home</a>
+      <a mat-list-item routerLink="/mainPage" routerLinkActive="active" (click)="sidenav.close()">Adopt</a>
+      <a mat-list-item routerLink="/favoritesPage" routerLinkActive="active" (click)="sidenav.close()">Favorites</a>
+      <a mat-list-item routerLink="/addPetPage" routerLinkActive="active" (click)="sidenav.close()">Add new pet</a>
+      <a mat-list-item routerLink="/aboutPage" routerLinkActive="active" (click)="sidenav.close()">About</a>
+      <a mat-list-item routerLink="/contactPage" routerLinkActive="active" (click)="sidenav.close()">Contact</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

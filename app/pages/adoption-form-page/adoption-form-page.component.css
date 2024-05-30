@@ -1,0 +1,59 @@
+.adoption-form-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #eeedea; /* Background color */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased margin */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #254336; /* Label color */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px; /* Increased padding */
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #6B8A7A; /* Border color on focus */
+}
+
+button {
+    padding: 12px 24px; /* Increased padding */
+    background-color: #254336; /* Button background color */
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #6B8A7A; /* Button background color on hover */
+}
+
+.aliniereMijloc {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: #254336; /* Heading color */
+    font-weight: bold;
+    margin-bottom: 30px; /* Increased margin */
+}

@@ -1,0 +1,61 @@
+/* Logo styling */
+.logo1 {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Main toolbar and menu styling */
+.mat-toolbar {
+  background-color: white; /* Updated toolbar background color */
+  color: #B7B597; /* Updated toolbar text color */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* Main menu links styling */
+.main-menu a {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #6B8A7A; /* Updated menu link color */
+  text-decoration: none;
+}
+
+.main-menu a:hover {
+  color: #B7B597; /* Updated menu link hover color */
+}
+
+/* Menu button styling */
+.menu-button {
+  display: none;
+}
+
+/* Sidenav styling */
+.side-menu {
+  height: calc(100vh - 64px); /* Adjust based on the height of your toolbar */
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #6B8A7A; /* Updated sidenav background color */
+}
+
+.mat-nav-list a {
+  color: #6B8A7A;
+}
+
+.mat-nav-list a:hover {
+  font-weight: bold;
+  color: #DAD3BE; /* Updated sidenav link hover color */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+  .main-menu {
+    display: none;
+  }
+  .menu-button {
+    display: inline-block;
+  }
+}
